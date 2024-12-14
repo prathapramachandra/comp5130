@@ -1,0 +1,359 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f4ef;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  background-color: #b1332b;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #7e2c29;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.navbar li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+.navbar li::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ff9800;
+  transition: width 0.3s, left 0.3s;
+}
+
+.navbar li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Hero Section with Glassmorphism Effect */
+.hero {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.hero h1 {
+  color: #b1332b;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  color: #7e2c29;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+/* Hero CTA Buttons with Neon Glow Effect */
+.hero .cta {
+  margin-top: 20px;
+}
+
+.hero .cta button {
+  padding: 10px 20px;
+  background-color: #b1332b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px rgba(255, 94, 0, 0.5);
+}
+
+.hero .cta button:hover {
+  background-color: #ff6600;
+  box-shadow: 0 0 30px rgba(255, 94, 0, 0.8);
+}
+
+/* Category Section */
+.categories {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.category-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  width: 23%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-item h3 {
+  color: #b1332b;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.category-item p {
+  color: #7e2c29;
+  font-size: 1rem;
+}
+
+.category-item a {
+  color: #b1332b;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.category-item a:hover {
+  color: #ff9800;
+}
+
+/* Recipe Grid with Staggered Animation */
+.featured-restaurants {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.featured-restaurants h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.restaurant-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.restaurant-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.restaurant-card h3 {
+  color: #b1332b;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.restaurant-card p {
+  color: #7e2c29;
+  font-size: 1rem;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for Staggered Appearance */
+@keyframes staggeredReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Review Section with Sliding Animation */
+.reviews {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: slideIn 1.2s ease;
+}
+
+.review-item {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.2s ease;
+}
+
+.review-item h4 {
+  color: #b1332b;
+  font-size: 1.2rem;
+}
+
+.review-item p {
+  color: #7e2c29;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #7e2c29;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-list {
+    flex-direction: column;
+  }
+
+  .category-item, .restaurant-card {
+    width: 100%;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode header, body.dark-mode .navbar, body.dark-mode footer {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .hero {
+  background: rgba(20, 20, 20, 0.9);
+}
+
+body.dark-mode .category-item, body.dark-mode .restaurant-card {
+  background-color: rgba(40, 40, 40, 0.8);
+}
